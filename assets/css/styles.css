@@ -154,22 +154,18 @@ p { margin: 0 0 1em; }
 .two-col > .actions { align-self: start; margin-top: 12px; }
 
 /* ---------- Trainings ---------- */
-.trainings { display: block; }
-.program-select { display: none; }
-.program-nav h2 { font-family: var(--sans); font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 32px 0 12px; }
-.program-nav h2:first-child { margin-top: 0; }
-.program-nav ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-.program-nav a { display: flex; flex-direction: column; justify-content: space-between; gap: 14px; height: 100%; padding: 16px 18px; border: 1px solid var(--sand); border-radius: var(--radius); text-decoration: none; font-family: var(--serif); font-size: 19px; font-weight: 600; line-height: 1.2; transition: border-color .2s, background .2s; }
-.program-nav a small { font-family: var(--sans); font-weight: 400; color: var(--muted); font-size: 13px; }
-.program-nav a:hover { background: var(--paper); border-color: var(--ink); }
-.back-link { display: none; margin-bottom: 20px; font-size: 14px; text-decoration: none; color: var(--muted); }
-.back-link:hover { color: var(--ink); }
-.trainings.is-detail .program-nav { display: none; }
-.trainings.is-detail .back-link { display: inline-block; }
+.page-trainings { --sidebar: 380px; }
+.nav-trainings { margin-top: 28px; }
+.nav-trainings .nav-back { margin-bottom: 8px; }
+.nav-title { font-family: var(--serif); font-size: 26px; font-weight: 600; color: var(--on-navy); margin: 8px 0 0; }
+.program-nav h2 { font-family: var(--sans); font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--on-navy-muted); font-weight: 500; margin: 22px 0 6px; }
+.program-nav ul { list-style: none; margin: 0; padding: 0; }
+.nav .program-nav a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; font-size: 14px; line-height: 1.35; }
+.program-nav a small { color: var(--on-navy-muted); font-size: 12px; white-space: nowrap; padding-top: 1px; }
+.program-nav a[aria-current="true"] { color: var(--on-navy); border-left-color: var(--bordo-light); background: rgba(255,255,255,.07); }
 
 .program { background: var(--paper); border-radius: var(--radius); padding: 28px 32px; }
 .js .program:not(.is-active) { display: none; }
-.program { max-width: 880px; }
 .program + .program { margin-top: 24px; }
 .js .program + .program { margin-top: 0; }
 .program-hours { display: inline-block; background: var(--stone); border-radius: 40px; padding: 4px 12px; font-size: 13px; margin-bottom: 10px; }

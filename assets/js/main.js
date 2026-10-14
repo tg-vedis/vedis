@@ -96,24 +96,24 @@ if (orderDialog) {
   orderDialog.addEventListener('click', (event) => { if (event.target === orderDialog) orderDialog.close(); });
 }
 
-/* ---------- Тренінги: каталог → програма на всю ширину ---------- */
+/* ---------- Тренінги: список у бічному меню, програма справа ---------- */
 const programs = [...document.querySelectorAll('.program')];
 if (programs.length) {
-  const trainings = document.querySelector('.trainings');
-  const pageHead = document.querySelector('.page-head');
   const links = [...document.querySelectorAll('.program-nav a')];
-  const listTitle = document.title;
-  const show = (id, scroll) => {
-    const target = programs.find((p) => p.id === id) || null;
+  const show = (id) => {
+    const target = programs.find((p) => p.id === id) || programs[0];
     programs.forEach((p) => p.classList.toggle('is-active', p === target));
-    links.forEach((a) => a.setAttribute('aria-current', target && a.hash === `#${target.id}` ? 'true' : 'false'));
-    trainings.classList.toggle('is-detail', !!target);
-    if (pageHead) pageHead.hidden = !!target;
-    document.title = target ? `${target.querySelector('h2').textContent} — тренінг | Ведіс` : listTitle;
-    if (scroll) window.scrollTo(0, 0);
+    links.forEach((a) => a.setAttribute('aria-current', a.hash === `#${target.id}` ? 'true' : 'false'));
+    document.title = `${target.querySelector('h2').textContent} — тренінг | Ведіс`;
+    window.scrollTo(0, 0);
+    if (sidebar && menuToggle) {
+      sidebar.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', false);
+      menuToggle.querySelector('span').textContent = 'Меню';
+    }
   };
-  window.addEventListener('hashchange', () => show(location.hash.slice(1), true));
-  show(location.hash.slice(1), !!location.hash);
+  window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+  show(location.hash.slice(1));
 
   document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
 }
