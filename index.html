@@ -1,91 +1,164 @@
 <!doctype html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Консалтингова агенція Vedis." />
-    <title>Vedis — Консалтингова агенція</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --bg: #0f1b1a;
-        --bg-soft: #16302c;
-        --text: #f4f1e8;
-        --muted: #a9bdb8;
-        --accent: #c9a86a;
-      }
-      * { box-sizing: border-box; }
-      html, body {
-        height: 100%;
-        margin: 0;
-      }
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: radial-gradient(circle at 50% 0%, var(--bg-soft), var(--bg) 65%);
-        color: var(--text);
-        font-family: "DM Sans", system-ui, sans-serif;
-        text-align: center;
-        padding: 24px;
-      }
-      .wrap { max-width: 560px; }
-      .eyebrow {
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 13px;
-        color: var(--accent);
-        margin: 0 0 18px;
-      }
-      h1 {
-        font-family: "Playfair Display", serif;
-        font-weight: 600;
-        font-size: clamp(36px, 7vw, 56px);
-        margin: 0 0 16px;
-        letter-spacing: 0.5px;
-      }
-      h1 span { color: var(--accent); }
-      p.lead {
-        color: var(--muted);
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 0 0 40px;
-      }
-      .divider {
-        width: 56px;
-        height: 1px;
-        background: var(--accent);
-        margin: 0 auto 40px;
-        opacity: 0.6;
-      }
-      .contact {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text);
-        text-decoration: none;
-        border: 1px solid rgba(244, 241, 232, 0.25);
-        border-radius: 999px;
-        padding: 12px 26px;
-        font-size: 15px;
-        transition: border-color 0.2s ease, background 0.2s ease;
-      }
-      .contact:hover {
-        border-color: var(--accent);
-        background: rgba(201, 168, 106, 0.08);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <p class="eyebrow">Незабаром</p>
-      <h1>Консалтингова<br />агенція <span>Vedis</span></h1>
-      <p class="lead">Ми готуємо новий сайт. Дякуємо за терпіння — зовсім скоро тут буде більше інформації про наші послуги.</p>
-      <div class="divider"></div>
-      <a class="contact" href="mailto:tg@vedis.com.ua">tg@vedis.com.ua</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Консалтингова агенція Ведіс — фінансовий консалтинг і корпоративні тренінги</title>
+  <meta name="description" content="Тетяна Герасимова — фінансова консультантка і бізнес-тренерка. Фінансові консультації для власників бізнесу, корпоративні тренінги, стратегічні сесії, бізнес-плани." />
+  <link rel="canonical" href="https://vedis.com.ua/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:site_name" content="Консалтингова агенція Ведіс" />
+  <meta property="og:title" content="Консалтингова агенція Ведіс — фінансовий консалтинг і корпоративні тренінги" />
+  <meta property="og:description" content="Тетяна Герасимова — фінансова консультантка і бізнес-тренерка. Фінансові консультації для власників бізнесу, корпоративні тренінги, стратегічні сесії, бізнес-плани." />
+  <meta property="og:url" content="https://vedis.com.ua/" />
+  <meta name="theme-color" content="#1c2535" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261014-1552" />
+</head>
+<body>
+  <div class="layout">
+    <header class="sidebar">
+      <a class="brand" href="./" aria-label="Ведіс — на головну">
+        <img src="assets/img/logo-mark.svg" alt="" width="44" height="44" />
+        <span><span class="brand-name">Ведіс</span><span class="brand-tag">Консалтингова агенція</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span>Меню</span></button>
+      <nav class="nav" id="main-nav" aria-label="Головне меню">
+        <a href="./" aria-current="page"><span>01</span>Про мене</a>
+        <a href="treningy.html"><span>02</span>Тренінги</a>
+        <a href="konsultatsii.html"><span>03</span>Консультації</a>
+        <a href="stratehichni-sesii.html"><span>04</span>Стратегічні сесії і модерація</a>
+        <a href="biznes-plany.html"><span>05</span>Бізнес-плани</a>
+        <a href="hra-de-hroshi.html"><span>06</span>Гра &#171;Де гроші?&#187;</a>
+        <a href="klienty.html"><span>07</span>Клієнти та відгуки</a>
+        <a href="kontakty.html"><span>08</span>Контакти</a>
+      </nav>
+      <div class="sidebar-foot">
+        <a href="mailto:tg@vedis.com.ua">tg@vedis.com.ua</a>
+        <a href="https://t.me/TetianaHerasymova1" target="_blank" rel="noopener">Telegram @TetianaHerasymova1</a>
+        <a class="button button-light" href="kontakty.html" data-order="" data-order-title="Зв’язатися">Зв’язатися</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <main class="page" id="main">
+        <section class="hero">
+          <div>
+            <p class="section-index">01 / Про мене</p>
+            <h1>Тетяна<br />Герасимова</h1>
+            <p class="role">Фінансова консультантка і бізнес-тренерка</p>
+            <p class="lead">Спеціалізуюся на фінансовому консультуванні власників і керівників бізнесу та корпоративному навчанні управлінських команд.</p>
+            <div class="actions">
+              <a class="button button-primary" href="kontakty.html" data-order="" data-order-title="Обговорити задачу">Обговорити задачу</a>
+              <a class="button button-ghost" href="treningy.html">Програми тренінгів</a>
+            </div>
+          </div>
+          <div class="portrait" aria-hidden="true">ТГ</div>
+        </section>
+
+        <div class="stats">
+          <div class="stat"><b>8</b><span>років на посадах фінансового директора</span></div>
+          <div class="stat"><b>10+</b><span>років у тренерстві та консалтингу</span></div>
+          <div class="stat"><b>200+</b><span>проведених тренінгів</span></div>
+          <div class="stat"><b>5 000+</b><span>учасників: власників бізнесу та менеджерів</span></div>
+        </div>
+
+        <section class="block">
+          <div class="audience">
+            <article class="card">
+              <p class="kicker">Власникам і керівникам бізнесу</p>
+              <h3>Індивідуальні консультації</h3>
+              <p>З питань фінансового управління: аналіз ситуації, розбір звітності, бюджетування, ціноутворення, стратегічні фінансові рішення. Розробка та аудит бізнес-планів.</p>
+            </article>
+            <article class="card">
+              <p class="kicker">Компаніям</p>
+              <h3>Корпоративні тренінги</h3>
+              <p>З фінансового мислення для менеджерів нефінансових підрозділів, управлінського обліку та стратегічного планування. Програми адаптуються під специфіку компанії та рівень підготовки учасників.</p>
+            </article>
+          </div>
+          <div class="credentials" aria-label="Кваліфікація">
+            <span>Викладачка програм MBA</span>
+            <span>Сертифікована бізнес-тренерка</span>
+            <span>CAP</span>
+            <span>CIMA</span>
+            <span>IAPBE</span>
+          </div>
+        </section>
+
+        <section class="block">
+          <div class="block-head">
+            <p class="section-index">Напрями роботи</p>
+            <h2>Чим я можу бути <em>корисною</em></h2>
+          </div>
+          <div class="directions">
+            <a class="direction" href="treningy.html"><small>02</small><strong>Тренінги</strong><span>18 корпоративних програм з фінансів, бюджетування й управлінського обліку</span><span class="arrow">→</span></a>
+            <a class="direction" href="konsultatsii.html"><small>03</small><strong>Консультації</strong><span>Разові зустрічі або регулярна підтримка зовнішнього фінансового директора</span><span class="arrow">→</span></a>
+            <a class="direction" href="stratehichni-sesii.html"><small>04</small><strong>Стратегічні сесії і модерація</strong><span>Процес, у якому команда сама приходить до спільного рішення</span><span class="arrow">→</span></a>
+            <a class="direction" href="biznes-plany.html"><small>05</small><strong>Бізнес-плани</strong><span>Розробка, фінансове моделювання та аудит</span><span class="arrow">→</span></a>
+            <a class="direction" href="hra-de-hroshi.html"><small>06</small><strong>Гра «Де гроші?»</strong><span>Фінанси через практику, а не лекції</span><span class="arrow">→</span></a>
+          </div>
+        </section>
+
+        <section class="block">
+          <div class="block-head">
+            <p class="section-index">Мені довіряють</p>
+            <h2>Клієнти та <em>партнери</em></h2>
+          </div>
+          <div class="clients-strip">
+            <div class="client is-tile"><img src="assets/clients/darnytsia.png" alt="Дарниця" loading="lazy" /></div>
+            <div class="client"><img src="assets/clients/arterium.png" alt="Артеріум" loading="lazy" /></div>
+            <div class="client is-tile"><img src="assets/clients/kernel.png" alt="Kernel" loading="lazy" /></div>
+            <div class="client"><img src="assets/clients/bdo.png" alt="BDO" loading="lazy" /></div>
+            <div class="client"><img src="assets/clients/subaru.png" alt="Subaru" loading="lazy" /></div>
+            <div class="client"><img src="assets/clients/badm.png" alt="БаДМ" loading="lazy" /></div>
+          </div>
+          <div class="actions"><a class="button button-ghost" href="klienty.html">Усі клієнти →</a></div>
+        </section>
+
+        <section class="block">
+          <div class="cta-band">
+            <div>
+              <h2>Почнімо з <em>розмови</em></h2>
+              <p>Розкажіть про вашу задачу, і я запропоную формат роботи.</p>
+            </div>
+            <a class="button button-primary" href="kontakty.html" data-order="" data-order-title="Обговорити задачу">Зв’язатися</a>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <span>© <span data-year>2026</span> Консалтингова агенція «Ведіс»</span>
+        <a href="mailto:tg@vedis.com.ua">tg@vedis.com.ua</a>
+      </footer>
     </div>
-  </body>
+  </div>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-title">
+    <form class="form js-form" data-subject="Замовлення з сайту">
+      <button class="dialog-close" type="button" aria-label="Закрити">×</button>
+      <h2 id="order-title">Замовити</h2>
+      <p class="service-name"></p>
+      <input type="hidden" name="service" />
+      <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
+      <div class="row">
+        <label>Ваше ім’я<input name="name" autocomplete="name" required /></label>
+        <label>Компанія<input name="company" autocomplete="organization" /></label>
+      </div>
+      <div class="row">
+        <label>Телефон, Telegram або Viber<input name="phone" autocomplete="tel" required /></label>
+        <label>Email<input name="email" type="email" autocomplete="email" /></label>
+      </div>
+      <label>Коментар<textarea name="message" placeholder="Кількість учасників, бажані дати, ваш запит"></textarea></label>
+      <button class="button button-primary" type="submit">Надіслати заявку</button>
+      <p class="form-status" role="status"></p>
+    </form>
+  </dialog>
+
+  <script src="assets/js/main.js?v=20261014-1552"></script>
+</body>
 </html>
