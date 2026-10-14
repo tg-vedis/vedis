@@ -6,7 +6,7 @@ const CONTACT_EMAIL = 'tg@vedis.com.ua';
 document.documentElement.classList.add('js');
 
 /* ---------- Версія сайту (змінюйте при кожному оновленні) ---------- */
-const SITE_VERSION = 'v1.1 · 14.10.2026';
+const SITE_VERSION = 'v1.2';
 const footer = document.querySelector('.footer');
 if (footer) {
   const version = document.createElement('span');

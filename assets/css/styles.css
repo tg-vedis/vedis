@@ -158,9 +158,10 @@ p { margin: 0 0 1em; }
 .nav-trainings { margin-top: 28px; }
 .nav-trainings .nav-back { margin-bottom: 8px; }
 .nav-title { font-family: var(--serif); font-size: 26px; font-weight: 600; color: var(--on-navy); margin: 8px 0 0; }
-.program-nav h2 { font-family: var(--sans); font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--on-navy-muted); font-weight: 500; margin: 22px 0 6px; }
+.program-nav h2 { font-family: var(--sans); font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--on-navy); font-weight: 600; margin: 32px 0 8px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.14); }
+.program-nav h2:first-child { margin-top: 20px; }
 .program-nav ul { list-style: none; margin: 0; padding: 0; }
-.nav .program-nav a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; font-size: 14px; line-height: 1.35; }
+.nav .program-nav a { display: block; font-size: 14px; line-height: 1.35; }
 .program-nav a small { color: var(--on-navy-muted); font-size: 12px; white-space: nowrap; padding-top: 1px; }
 .program-nav a[aria-current="true"] { color: var(--on-navy); border-left-color: var(--bordo-light); background: rgba(255,255,255,.07); }
 
