@@ -96,24 +96,24 @@ if (orderDialog) {
   orderDialog.addEventListener('click', (event) => { if (event.target === orderDialog) orderDialog.close(); });
 }
 
-/* ---------- Тренінги: список зліва, програма справа ---------- */
+/* ---------- Тренінги: каталог → програма на всю ширину ---------- */
 const programs = [...document.querySelectorAll('.program')];
 if (programs.length) {
+  const trainings = document.querySelector('.trainings');
+  const pageHead = document.querySelector('.page-head');
   const links = [...document.querySelectorAll('.program-nav a')];
-  const select = document.querySelector('.program-select select');
+  const listTitle = document.title;
   const show = (id, scroll) => {
-    const target = programs.find((p) => p.id === id) || programs[0];
+    const target = programs.find((p) => p.id === id) || null;
     programs.forEach((p) => p.classList.toggle('is-active', p === target));
-    links.forEach((a) => a.setAttribute('aria-current', a.hash === `#${target.id}` ? 'true' : 'false'));
-    if (select) select.value = target.id;
-    document.title = `${target.querySelector('h2').textContent} — тренінг | Ведіс`;
-    if (scroll && window.matchMedia('(max-width: 960px)').matches) {
-      document.querySelector('.trainings').scrollIntoView({ behavior: 'smooth' });
-    }
+    links.forEach((a) => a.setAttribute('aria-current', target && a.hash === `#${target.id}` ? 'true' : 'false'));
+    trainings.classList.toggle('is-detail', !!target);
+    if (pageHead) pageHead.hidden = !!target;
+    document.title = target ? `${target.querySelector('h2').textContent} — тренінг | Ведіс` : listTitle;
+    if (scroll) window.scrollTo(0, 0);
   };
   window.addEventListener('hashchange', () => show(location.hash.slice(1), true));
-  if (select) select.addEventListener('change', () => { location.hash = select.value; });
-  show(location.hash.slice(1), false);
+  show(location.hash.slice(1), !!location.hash);
 
   document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
 }
