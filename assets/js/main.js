@@ -1,6 +1,6 @@
 // Ключ доступу Web3Forms (https://web3forms.com): створіть його для tg@vedis.com.ua і вставте сюди.
 // Поки ключа немає, форми відкривають лист у поштовій програмі відвідувача.
-const WEB3FORMS_KEY = '';
+const WEB3FORMS_KEY = '18800b6e-0caa-4d67-ad0e-0f1e2ac3611d';
 const CONTACT_EMAIL = 'tg@vedis.com.ua';
 
 document.documentElement.classList.add('js');
