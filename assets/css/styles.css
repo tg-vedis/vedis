@@ -71,6 +71,7 @@ p { margin: 0 0 1em; }
 .page-head { margin-bottom: 28px; }
 .block { margin-top: 40px; }
 .block-head { margin-bottom: 16px; }
+.block-tight { margin-top: 24px; }
 
 /* ---------- Buttons ---------- */
 .button {
@@ -92,7 +93,7 @@ p { margin: 0 0 1em; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px; align-items: center; }
 .hero .role { font-family: var(--serif); font-size: 20px; line-height: 1.3; font-style: italic; color: var(--muted); margin-top: 8px; }
 .portrait {
-  aspect-ratio: 4 / 5; max-width: 300px; justify-self: end; width: 100%; border-radius: 200px 200px 6px 6px;
+  aspect-ratio: 4 / 5; max-width: 300px; justify-self: end; width: 100%; border-radius: 0;
   background: var(--sand-soft); overflow: hidden;
   display: grid; place-items: center;
   font-family: var(--serif); font-size: 96px; color: var(--sand);
@@ -129,7 +130,7 @@ p { margin: 0 0 1em; }
 /* ---------- Lists / services ---------- */
 .checklist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
 .checklist li { padding: 8px 0 8px 26px; border-bottom: 1px solid var(--sand); position: relative; }
-.checklist li::before { content: ""; position: absolute; left: 2px; top: 18px; width: 12px; height: 2px; background: var(--bordo); }
+.checklist li::before { content: ""; position: absolute; left: 4px; top: 17px; width: 7px; height: 7px; border-radius: 50%; background: var(--bordo); }
 
 .services { display: grid; gap: 12px; }
 .service { background: var(--paper); border-radius: var(--radius); padding: 22px 26px; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 8px 24px; }
@@ -248,7 +249,7 @@ p { margin: 0 0 1em; }
 .dialog-close { position: absolute; top: 14px; right: 16px; background: none; border: 0; font-size: 28px; line-height: 1; cursor: pointer; color: var(--muted); }
 
 /* ---------- Footer ---------- */
-.footer { border-top: 1px solid var(--sand); padding: 24px clamp(24px, 5vw, 72px); font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; }
+.footer { border-top: 1px solid var(--sand); padding: 24px clamp(24px, 5vw, 72px); font-size: 13px; color: var(--muted); display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px 24px; }
 .footer a { text-decoration: none; }
 .print-head { display: none; }
 
